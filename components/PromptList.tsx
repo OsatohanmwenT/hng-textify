@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { languageOptions } from "@/constants";
-import { summarizeText, translateLanguage } from "@/utils";
+import { summarizeText, translateLanguage, getLanguageLabel } from "@/utils";
 import { toast } from "@/hooks/use-toast";
 import MessageBox from "@/components/MessageBox";
 import PromptBox from "@/components/PromptBox";
@@ -43,7 +43,7 @@ const PromptList = ({ messages, setMessages }: Props) => {
       setMessages((prev) =>
         prev.map((item) =>
           item.id === messageId
-            ? { ...item, translation: translatedText.result }
+            ? { ...item, translation: translatedText.result, translatedLang: targetLang }
             : item,
         ),
       );
@@ -142,7 +142,7 @@ const PromptList = ({ messages, setMessages }: Props) => {
           {message.translation && (
             <MessageBox>
               <div className="bg-neutral-700 text-white p-3 rounded-lg max-w-lg">
-                <p className="text-blue-300 text-sm">Translated to:</p>
+                <p className="text-blue-300 text-sm">Translated to:  {getLanguageLabel(message.translatedLang || "fr")}</p>
                 <p className="max-sm:text-sm">{message.translation}</p>
               </div>
             </MessageBox>

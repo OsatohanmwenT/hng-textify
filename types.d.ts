@@ -8,4 +8,5 @@ interface PromptText {
   translation?: string;
   selectedLang?: string;
   summary?: string;
+  translatedLang?: string;
 }
