@@ -9,7 +9,8 @@ export default function Home() {
   const [messages, setMessages] = useState<PromptText[]>([]);
 
   return (
-    <div className="grid grid-rows-[1fr_auto] overflow-hidden gap-3 p-4 h-screen w-full font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[auto_1fr_auto] overflow-hidden gap-3 p-4 h-screen w-full font-[family-name:var(--font-geist-sans)]">
+        <header><h1 className="text-white font-semibold text-3xl">TEXTIFY</h1></header>
       <div className="h-full w-full absolute z-[-1] inset-0 bg-doodle opacity-5"></div>
       <div className="h-full z-10 w-full scroll overflow-y-scroll scroll max-h-[720px]">
         <div className="h-full flex flex-col max-w-4xl w-full mx-auto">
