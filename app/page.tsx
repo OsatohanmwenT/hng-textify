@@ -17,7 +17,7 @@ export default function Home() {
             <PromptList messages={messages} setMessages={setMessages} />
           ) : (
             <div className="h-full flex items-center justify-center">
-              <p className="font-semibold text-3xl text-center text-black dark:text-white">
+              <p className="font-semibold text-3xl text-center text-foreground">
                 WELCOME TO TEXTIFY
               </p>
             </div>

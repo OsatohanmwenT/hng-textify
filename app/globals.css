@@ -12,7 +12,7 @@
   scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: blue) {
+@media (prefers-color-scheme: dark) {
   :root {
     --input: #171717;
     --background: #212121;
