@@ -96,7 +96,7 @@ const PromptList = ({ messages, setMessages }: Props) => {
                 {message.language?.label}
               </div>
               <div className="flex items-center gap-1">
-                <p className="text-white text-[12px]">Translate to:</p>
+                <p className="dark:text-white text-[12px]">Translate to:</p>
                 <select
                   className="select-input"
                   value={message.selectedLang || "fr"}
